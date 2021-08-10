@@ -1,0 +1,30 @@
+{
+  "name": "@mintjamsinc/webtop-app-commons",
+  "version": "1.0.0",
+  "description": "A common library used by webtop applications.",
+  "main": "dist/bundle.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src",
+    "build": "npm run lint && rollup -c build/rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mintjamsinc/webtop-app-commons.git"
+  },
+  "keywords": [
+    "mintjams",
+    "webtop"
+  ],
+  "author": "MintJams Inc. <dev@mintjams.co.jp> (https://mintjams.jp/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mintjamsinc/webtop-app-commons/issues"
+  },
+  "homepage": "https://github.com/mintjamsinc/webtop-app-commons#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "rollup": "^2.56.2",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
