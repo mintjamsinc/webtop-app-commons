@@ -10,7 +10,8 @@ npm install --save-dev @mintjamsinc/webtop-app-commons
 ## Usage
 
 ```js
-import {Files} from '@mintjamsinc/webtop-app-commons';
+import commons from '@mintjamsinc/webtop-app-commons';
+const {Files} = commons;
 ```
 
 ## License
