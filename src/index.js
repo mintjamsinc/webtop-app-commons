@@ -8,6 +8,7 @@ import MimeType from './MimeType';
 import Numbers from './Numbers';
 import Objects from './Objects';
 import Sizes from './Sizes';
+import Storages from './Storages';
 import Strings from './Strings';
 import Web from './Web';
 
@@ -20,6 +21,7 @@ export default {
 	Numbers: Numbers,
 	Objects: Objects,
 	Sizes: Sizes,
+	Storages: Storages,
 	Strings: Strings,
 	Web: Web,
 };
