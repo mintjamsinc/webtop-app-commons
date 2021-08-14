@@ -10,7 +10,8 @@ npm install --save-dev @mintjamsinc/webtop-app-commons
 ## Usage
 
 ```js
-import {Dates, Facets, Files, ISO4217, MimeType, Numbers, Objects, Sizes, Strings, Web} from '@mintjamsinc/webtop-app-commons';
+import commons from '@mintjamsinc/webtop-app-commons';
+const {Dates, Facets, Files, ISO4217, MimeType, Numbers, Objects, Sizes, Strings, Web} = commons;
 ```
 
 ## License
