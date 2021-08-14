@@ -1,6 +1,6 @@
 {
   "name": "@mintjamsinc/webtop-app-commons",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "description": "A common library used by webtop applications.",
   "main": "dist/bundle.min.js",
   "scripts": {
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/mintjamsinc/webtop-app-commons#readme",
   "devDependencies": {
     "eslint": "^7.32.0",
+    "js-yaml": "^4.1.0",
     "moment": "^2.29.1",
     "webpack": "^5.50.0",
     "webpack-cli": "^4.7.2"
