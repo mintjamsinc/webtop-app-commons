@@ -1,3 +1,5 @@
+<img src="https://www.mintjams.jp/img/cr.svg" alt ="" width="64">
+
 # Webtop App Commons
 A common library used by webtop applications.
 
