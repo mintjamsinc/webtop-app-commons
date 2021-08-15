@@ -1,6 +1,6 @@
 // Copyright (c) 2021 MintJams Inc. Licensed under MIT License.
 
-import yaml from 'js-yaml'
+import YAML from './YAML'
 import Dates from './Dates'
 
 export default class Facets {
@@ -28,11 +28,11 @@ export default class Facets {
 	}
 
 	static parseYaml(text) {
-		return yaml.safeLoad(text);
+		return YAML.parse(text);
 	}
 
 	static makeYaml(o) {
-		return yaml.safeDump(JSON.parse(JSON.stringify(o)));
+		return YAML.stringify(o);
 	}
 
 	static trim(text) {

@@ -10,6 +10,7 @@ import Objects from './Objects';
 import Sizes from './Sizes';
 import Storages from './Storages';
 import Strings from './Strings';
+import YAML from './YAML';
 import Web from './Web';
 
 export default {
@@ -23,5 +24,6 @@ export default {
 	Sizes: Sizes,
 	Storages: Storages,
 	Strings: Strings,
+	YAML: YAML,
 	Web: Web,
 };

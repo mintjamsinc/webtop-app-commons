@@ -1,6 +1,6 @@
 {
   "name": "@mintjamsinc/webtop-app-commons",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A common library used by webtop applications.",
   "main": "dist/bundle.min.js",
   "scripts": {
