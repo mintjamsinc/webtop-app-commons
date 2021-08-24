@@ -1,5 +1,7 @@
 // Copyright (c) 2021 MintJams Inc. Licensed under MIT License.
 
+import CryptoJS from 'crypto-js';
+
 export default class Strings {
 	static defaultString(v, defaultValue) {
 		if (defaultValue == undefined) {
@@ -37,5 +39,13 @@ export default class Strings {
 			return v;
 		}
 		return '' + v;
+	}
+
+	static digest(algorithm, v) {
+		const f = CryptoJS[algorithm.toUpperCase()];
+		if (!f) {
+			throw 'No such algorithm: ' + algorithm;
+		}
+		return f(v).toString();
 	}
 }
