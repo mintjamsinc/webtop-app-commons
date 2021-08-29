@@ -1,5 +1,6 @@
 // Copyright (c) 2021 MintJams Inc. Licensed under MIT License.
 
+import Base32 from './Base32';
 import Base64 from './Base64';
 import CSV from './CSV';
 import Dates from './Dates';
@@ -17,6 +18,7 @@ import YAML from './YAML';
 import Web from './Web';
 
 export default {
+	Base32: Base32,
 	Base64: Base64,
 	CSV: CSV,
 	Dates: Dates,
