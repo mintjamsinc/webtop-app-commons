@@ -48,4 +48,9 @@ export default class Strings {
 		}
 		return f(v).toString();
 	}
+
+	static randomString(length = 16) {
+		const S = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		return Array.from(Array(length)).map(() => S[Math.floor(Math.random() * S.length)]).join('');
+	}
 }

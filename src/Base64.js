@@ -8,4 +8,8 @@ export default class Base64 {
 	static decode(value) {
 		return decodeURIComponent(escape(atob(value)));
 	}
+
+	static randomBytes(length = 20) {
+		return Base64.encode(window.crypto.getRandomValues(new Uint8Array(length)));
+	}
 }

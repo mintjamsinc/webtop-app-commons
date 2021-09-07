@@ -10,4 +10,8 @@ export default class Base32 {
 	static decode(value) {
 		return base32.decode(value);
 	}
+
+	static randomBytes(length = 20) {
+		return Base32.encode(window.crypto.getRandomValues(new Uint8Array(length)));
+	}
 }
