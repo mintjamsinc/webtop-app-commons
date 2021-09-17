@@ -8,6 +8,6 @@ export default class YAML {
 	}
 
 	static stringify(o) {
-		return yaml.safeDump(JSON.parse(JSON.stringify(o)));
+		return yaml.dump(JSON.parse(JSON.stringify(o)));
 	}
 }
