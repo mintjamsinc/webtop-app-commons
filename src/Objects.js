@@ -38,4 +38,23 @@ export default class Objects {
 		}
 		return JSON.parse(o, reviver);
 	}
+
+	static defineProperties(config) {
+		for (const [k, v] of Object.entries(config.definitions)) {
+			let descriptor = {};
+			if (v.indexOf('get') != -1) {
+				descriptor['get'] = function() {
+					return config.data[k];
+				};
+			}
+			if (v.indexOf('set') != -1) {
+				descriptor['set'] = function(value) {
+					config.data[k] = value;
+				};
+			}
+			if (Object.keys(descriptor).length > 0) {
+				Object.defineProperty(config.instance, k, descriptor);
+			}
+		}
+	}
 }
