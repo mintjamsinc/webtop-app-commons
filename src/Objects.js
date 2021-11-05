@@ -40,18 +40,30 @@ export default class Objects {
 	}
 
 	static defineProperties(config) {
-		for (const [k, v] of Object.entries(config.definitions)) {
+		for (let [k, v] of Object.entries(config.definitions)) {
+			if (!Array.isArray(v)) {
+				v = [v];
+			}
+
 			let descriptor = {};
-			if (v.indexOf('get') != -1) {
-				descriptor['get'] = function() {
-					return config.data[k];
-				};
+			for (const e of v) {
+				if (typeof e == 'function') {
+					descriptor[e.name] = e;
+					continue;
+				}
+
+				if (e == 'get') {
+					descriptor['get'] = function() {
+						return config.data[k];
+					};
+				}
+				if (e == 'set') {
+					descriptor['set'] = function(value) {
+						config.data[k] = value;
+					};
+				}
 			}
-			if (v.indexOf('set') != -1) {
-				descriptor['set'] = function(value) {
-					config.data[k] = value;
-				};
-			}
+
 			if (Object.keys(descriptor).length > 0) {
 				Object.defineProperty(config.instance, k, descriptor);
 			}
