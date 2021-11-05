@@ -56,5 +56,6 @@ export default class Objects {
 				Object.defineProperty(config.instance, k, descriptor);
 			}
 		}
+		return config.instance;
 	}
 }
