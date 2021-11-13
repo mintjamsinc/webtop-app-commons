@@ -39,6 +39,10 @@ export default class Objects {
 		return JSON.parse(o, reviver);
 	}
 
+	static equals(o1, o2) {
+		return (Objects.stringify(o1) === Objects.stringify(o2));
+	}
+
 	static defineProperties(config) {
 		for (let [k, v] of Object.entries(config.definitions)) {
 			if (!Array.isArray(v)) {
