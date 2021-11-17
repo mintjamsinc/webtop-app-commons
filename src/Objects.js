@@ -49,6 +49,13 @@ export default class Objects {
 				v = [v];
 			}
 
+			const refdata = function() {
+				if (typeof config.data === 'function') {
+					return config.data();
+				}
+				return config.data;
+			};
+
 			let descriptor = {};
 			for (const e of v) {
 				if (typeof e == 'function') {
@@ -58,12 +65,12 @@ export default class Objects {
 
 				if (e == 'get') {
 					descriptor['get'] = function() {
-						return config.data[k];
+						return refdata()[k];
 					};
 				}
 				if (e == 'set') {
 					descriptor['set'] = function(value) {
-						config.data[k] = value;
+						refdata()[k] = value;
 					};
 				}
 			}
